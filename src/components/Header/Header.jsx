@@ -42,7 +42,7 @@ const Header = () => {
             >
               <ul className="flex flex-col md:flex-row md:space-x-8 md:items-center">
                 <li className=" my-2 md:my-0">
-                  <Link className="font-semibold hover:text-blue-600" to="#">
+                  <Link className="font-semibold hover:text-blue-600" to="/">
                     Home
                   </Link>
                 </li>
