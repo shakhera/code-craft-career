@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -11,66 +12,65 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="bg-gray-100">
-        {/* <nav className="bg-gradient-to-r from-purple-300 to-indigo-500"> */}
+      <nav className="bg-gray-100 p-5  shadow md:flex md:items-center md:justify-between">
         <div className="container mx-auto">
           <div className="flex items-center justify-between py-4">
-            <a className="text-3xl font-bold font-mono" href="#">
+            <a className="text-1xl md:text-3xl font-bold font-mono" href="#">
               CodeCraftCareer
             </a>
             <button
-              className="block lg:hidden focus:outline-none"
+              className="block lg:hidden focus:outline-none "
               onClick={toggleMenu}
             >
               {showMenu ? (
                 <FontAwesomeIcon
                   icon={faTimes}
-                  className="w-6 h-6 fill-current"
+                  className="w-6 h-6 fill-current absolute top-0 right-0 mt-12  mr-12 cursor-pointer"
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={faBars}
-                  className="w-6 h-6 fill-current"
+                  className="w-6 h-6 fill-current "
                 />
               )}
             </button>
 
             <div
-              className={`lg:flex lg:items-center lg:w-auto ${
+              className={` lg:flex lg:items-center lg:w-auto ${
                 showMenu ? "block" : "hidden"
               }`}
             >
-              <ul className="flex flex-col lg:flex-row lg:space-x-8 lg:items-center">
-                <li>
-                  <a className="font-semibold hover:text-blue-600" href="#">
+              <ul className="flex flex-col md:flex-row md:space-x-8 md:items-center">
+                <li className=" my-2 md:my-0">
+                  <Link className="font-semibold hover:text-blue-600" to="#">
                     Home
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a
+                <li className=" my-2 md:my-0">
+                  <Link
                     className="font-semibold hover:text-blue-600"
-                    href="/statistics"
+                    to="/statistics"
                   >
                     Statistics
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a
+                <li className=" my-2 md:my-0">
+                  <Link
                     className="font-semibold hover:text-blue-600"
-                    href="/appliedjobs"
+                    to="/appliedjobs"
                   >
                     Applied Jobs
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a className="font-semibold hover:text-blue-600" href="/blog">
+                <li className=" my-2 md:my-0">
+                  <Link
+                    className="font-semibold hover:text-blue-600"
+                    to="/blog"
+                  >
                     Blog
-                  </a>
+                  </Link>
                 </li>
               </ul>
-              {/* <button className="ml-5 px-4 py-2 text-white font-bold rounded bg-gradient-to-r from-purple-300 to-indigo-500 hover:bg-indigo-700 focus:outline-none focus:bg-indigo-800">
-              Start Apply
-              </button> */}
               <button className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-300 to-indigo-500 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 Start Apply
               </button>
