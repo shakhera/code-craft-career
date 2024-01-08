@@ -3,7 +3,7 @@ import user from "../../assets/images/user.png";
 const Home = () => {
   return (
     <div>
-      <section className="flex justify-between">
+      <section className=" md:flex justify-between">
         <div className="flex justify-center items-center">
         <div className="mt-12 w-96 text-left">
           <h2 className=" font-manrope text-6xl font-extrabold m-4">
