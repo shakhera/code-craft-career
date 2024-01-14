@@ -1,0 +1,10 @@
+.bg-img {
+  margin-top: 105px;
+  background-image: url("../../assets/images/bg1.png");
+  background-image: url("../../assets/images/bg2.png");
+  background-repeat: no-repeat;
+  display: flex;
+}
+.job-details {
+  text-align: center;
+}
