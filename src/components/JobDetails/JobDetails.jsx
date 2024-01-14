@@ -15,9 +15,10 @@ import NextNab from "../sharePage/NextNab/NextNab";
 const JobDetails = () => {
   return (
     <div>
-      {/* <div className="sm:hidden md:block">
-        <NextNab></NextNab>
-      </div> */}
+      <div className="hidden md:flex md:justify-between">
+        <img src={bg1} alt="" />
+        <img src={bg2} alt="" />
+      </div>
       <hr className=" border-t shadow-lg border-gray-300" />
       <h2 className="text-4xl font-extrabold mt-4">Job Details </h2>
       <div className="grid grid-cols-1 px-6 md:grid-cols-2 gap-4 mt-14">

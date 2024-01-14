@@ -5,7 +5,6 @@ import Header from "../../Header/Header";
 const NextNab = () => {
   return (
     <div>
-      {/* <Header></Header> */}
       <div className="flex justify-between">
         <img src={bg1} alt="" />
         <img src={bg2} alt="" />
