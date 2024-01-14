@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDollar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Link, useNavigate } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
@@ -13,6 +14,12 @@ const Job = ({ job }) => {
     remote_or_onsite,
     job_type,
   } = job;
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("jobDetails");
+  };
+
   return (
     <div className="rounded-2xl bg-gradient-to-r from-gray-100 to-gray-200 p-12 ">
       <img className="w-24 h-16" src={logo} alt="" />
@@ -28,7 +35,7 @@ const Job = ({ job }) => {
       </div>
       <div className="flex gap-4">
         <p>
-           <FontAwesomeIcon icon={faLocationDot}  />
+          <FontAwesomeIcon icon={faLocationDot} />
           {location}
         </p>
         <p>
@@ -37,9 +44,14 @@ const Job = ({ job }) => {
         </p>
       </div>
       <div className="flex justify-start pt-3">
-        <button className=" px-4 py-3 text-white text-1xl font-bold rounded-lg transition duration-300 ease-in-out bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-purple-600 hover:to-indigo-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <button
+          onClick={handleNavigate}
+          className=" px-4 py-3 text-white text-1xl font-bold rounded-lg transition duration-300 ease-in-out bg-gradient-to-r from-indigo-400 to-purple-600 hover:from-purple-600 hover:to-indigo-400 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
           View Details
         </button>
+
+        {/* <Link to="/jobDetails">Job Details</Link> */}
       </div>
     </div>
   );

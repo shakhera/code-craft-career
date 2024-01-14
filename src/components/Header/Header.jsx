@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -42,33 +43,33 @@ const Header = () => {
             >
               <ul className="flex flex-col md:flex-row md:space-x-8 md:items-center">
                 <li className=" my-2 md:my-0">
-                  <Link className="font-semibold hover:text-blue-600" to="/">
+                  <ActiveLink className="font-semibold hover:text-blue-600" to="/">
                     Home
-                  </Link>
+                  </ActiveLink>
                 </li>
                 <li className=" my-2 md:my-0">
-                  <Link
+                  <ActiveLink
                     className="font-semibold hover:text-blue-600"
                     to="/statistics"
                   >
                     Statistics
-                  </Link>
+                  </ActiveLink>
                 </li>
                 <li className=" my-2 md:my-0">
-                  <Link
+                  <ActiveLink
                     className="font-semibold hover:text-blue-600"
                     to="/appliedjobs"
                   >
                     Applied Jobs
-                  </Link>
+                  </ActiveLink>
                 </li>
                 <li className=" my-2 md:my-0">
-                  <Link
+                  <ActiveLink
                     className="font-semibold hover:text-blue-600"
                     to="/blog"
                   >
                     Blog
-                  </Link>
+                  </ActiveLink>
                 </li>
               </ul>
               <button className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-300 to-indigo-500 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500">

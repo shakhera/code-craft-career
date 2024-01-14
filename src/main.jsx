@@ -9,6 +9,8 @@ import Home from "./components/Home/Home.jsx";
 import Statistics from "./components/Statistics/Statistics.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import ApliedJobs from "./components/ApliedJobs/ApliedJobs.jsx";
+import Job from "./components/Job/Job.jsx";
+import JobDetails from "./components/JobDetails/JobDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,17 +20,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("categories.json"),
       },
+      {
+        path: "/jobDetails",
+        element: <JobDetails></JobDetails>,
+        loader: () => fetch("https://mocki.io/v1/796d8b37-4637-4935-bf43-6d7a8788ae1c"),
+      },
+
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
-        loader: () => fetch("categories.json"),
       },
-      // {
-      //   path: "/",
-      //   element: ,
-      //   loader: () => fetch("jobs.json"),
-      // },
 
       {
         path: "/appliedjobs",

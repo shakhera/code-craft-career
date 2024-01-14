@@ -2,7 +2,7 @@ import React from "react";
 import social from "../../assets/icons/social.png";
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 px-12  fixed bottom-0 left-0 w-ful ">
+    <footer className="bg-black text-white py-8 px-12 mt-5 ">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mx-3">
         <div className="text-left mb-4">
           <h4 className="text-white font-manrope font-semibold text-lg pb-2">
@@ -61,10 +61,12 @@ const Footer = () => {
 
       <div className="text-white text-sm md:flex justify-between mt-4 mx-12">
         <p className=" font-inter font-normal leading-7">
-          @2023 <span className="font-semibold leading-7">CodeCraftCareer</span> . All Rights Reserved{" "}
+          @2023 <span className="font-semibold leading-7">CodeCraftCareer</span>{" "}
+          . All Rights Reserved{" "}
         </p>
         <p className=" font-inter font-normal leading-7">
-          Powered by <span className=" font-semibold leading-7">CodeCraftCareer</span>
+          Powered by{" "}
+          <span className=" font-semibold leading-7">CodeCraftCareer</span>
         </p>
       </div>
     </footer>
