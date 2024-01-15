@@ -1,26 +1,16 @@
 import React from "react";
 import NextNab from "../sharePage/NextNab/NextNab";
 import { useLoaderData } from "react-router-dom";
+import AppliedJobDetails from "../AppliedJobDetails/AppliedJobDetails";
 
 const ApliedJobs = () => {
   const jobList = useLoaderData();
-  const {
-    id,
-    logo,
-    job_title,
-    company_name,
-    location,
-    salary,
-    remote_or_onsite,
-    job_type,
-  } = jobList;
+
   return (
     <div>
-      <div className="list-disc pl-4">
+      <div className="">
         {jobList.map((item) => (
-          <h2 key={item.id} className="mb-2">
-            {item.job_title}
-          </h2>
+          <AppliedJobDetails key={item.id} item={item}></AppliedJobDetails>
         ))}
       </div>
     </div>
