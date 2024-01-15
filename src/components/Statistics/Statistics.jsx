@@ -121,34 +121,42 @@ const Statistics = () => {
   ];
 
   return (
-    <div className="mt-12 pl-4 md:flex md:justify-between md:mx-24  ">
-      <LineChart className=" mx-auto " width={320} height={300} data={jobData}>
-        <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
-        <XAxis dataKey="jobTitle"></XAxis>
-        <YAxis></YAxis>
-        <Tooltip></Tooltip>
-        {/* <Legend /> */}
-        <Line type="monotone" dataKey="salary" stroke="#8884d8"></Line>
-      </LineChart>
-
-      <BarChart className=" mx-auto " width={320} height={300} data={jobData}>
-        <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
-        <XAxis dataKey="jobTitle"></XAxis>
-        <YAxis></YAxis>
-        <Tooltip></Tooltip>
-
-        <Bar
-          className="mb-12"
-          dataKey="salary"
-          stroke="#8884d8"
-          shape={<TriangleBar></TriangleBar>}
-          label={{ position: "top" }}
+    <div>
+      <h2 className="text-4xl font-extrabold mt-8">Job Statistics Overview</h2>
+      <div className="mt-12 pl-4 md:flex md:justify-between md:mx-24  ">
+        <LineChart
+          className=" mx-auto "
+          width={320}
+          height={300}
+          data={jobData}
         >
-          {jobData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]}></Cell>
-          ))}
-        </Bar>
-      </BarChart>
+          <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
+          <XAxis dataKey="jobTitle"></XAxis>
+          <YAxis></YAxis>
+          <Tooltip></Tooltip>
+          {/* <Legend /> */}
+          <Line type="monotone" dataKey="salary" stroke="#8884d8"></Line>
+        </LineChart>
+
+        <BarChart className=" mx-auto " width={320} height={300} data={jobData}>
+          <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
+          <XAxis dataKey="jobTitle"></XAxis>
+          <YAxis></YAxis>
+          <Tooltip></Tooltip>
+
+          <Bar
+            className="mb-12"
+            dataKey="salary"
+            stroke="#8884d8"
+            shape={<TriangleBar></TriangleBar>}
+            label={{ position: "top" }}
+          >
+            {jobData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % 20]}></Cell>
+            ))}
+          </Bar>
+        </BarChart>
+      </div>
     </div>
   );
 };
