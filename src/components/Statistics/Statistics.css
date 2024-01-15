@@ -1,0 +1,17 @@
+/* .my-my-cart {
+  height: 400px;
+  width: 600px;
+} */
+
+@media (min-width: 768px) {
+  .md-chart-container {
+    width: 600px;
+    height: 500px;
+  }
+
+  .lg-chart-container {
+    width: 800px;
+    height: 600px;
+    background-color: aqua;
+  }
+}

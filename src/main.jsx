@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/jobDetails",
         element: <JobDetails></JobDetails>,
-        loader: () => fetch("https://mocki.io/v1/796d8b37-4637-4935-bf43-6d7a8788ae1c"),
+        // loader: () => fetch("https://mocki.io/v1/796d8b37-4637-4935-bf43-6d7a8788ae1c"),
       },
 
       {
@@ -36,6 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/appliedjobs",
         element: <ApliedJobs></ApliedJobs>,
+        loader: () => fetch("jobs.json"),
       },
       {
         path: "/blog",
